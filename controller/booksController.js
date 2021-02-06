@@ -19,6 +19,7 @@ module.exports = {
   },
   //create takes in the properties defined in the book model (in req.body) and saves it to the database as a json object.
   create: function(req, res) {
+    console.log(req.body);
     db.Book
       .create(req.body)
       .then(dbModel => res.json(dbModel))

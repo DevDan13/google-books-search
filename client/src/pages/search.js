@@ -1,12 +1,12 @@
 // import axios from 'axios';
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import API from "../utils/API";
 
 
 function Search() {
     const [search, setSearch] = useState("");
     const [googleBooks, setGoogleBooks] = useState([]);
-    const [displayData, setDisplayData] = useState([])
+    // const [displayData, setDisplayData] = useState([])
 
     const handleInputChange = (event) => {
         setSearch(event.target.value)
@@ -25,26 +25,26 @@ function Search() {
 
 
 
-    useEffect(() => {
-        if (googleBooks) {
-            const showBooks = googleBooks.map((books) => {
-                return (
-                    <div key={books.id}>
-                        <p>{books.volumeInfo.title}</p>
-                        <img src={books.volumeInfo.imageLinks.thumbnail} alt="book img" />
-                        <p>{books.volumeInfo.authors.join(", ")}</p>
-                        <p>{books.volumeInfo.description}</p>
-                        <button onClick={handleSavedBooks(books.id)}>
-                            Save
-                        </button>
-                        <a target="_blank" href={books.volumeInfo.infoLink} rel="noreferrer">View</a>
-                    </div>
-                )
+    // useEffect(() => {
+    //     if (googleBooks) {
+    //         const showBooks = googleBooks.map((books) => {
+    //             return (
+    //                 <div key={books.id}>
+    //                     <p>{books.volumeInfo.title}</p>
+    //                     <img src={books.volumeInfo.imageLinks.thumbnail} alt="book img" />
+    //                     <p>{books.volumeInfo.authors.join(", ")}</p>
+    //                     <p>{books.volumeInfo.description}</p>
+    //                     <button onClick={handleSavedBooks(books.id)}>
+    //                         Save
+    //                     </button>
+    //                     <a target="_blank" href={books.volumeInfo.infoLink} rel="noreferrer">View</a>
+    //                 </div>
+    //             )
 
-            });
-            setDisplayData(showBooks);
-        }
-    }, [googleBooks])
+    //         });
+    //         setDisplayData(showBooks);
+    //     }
+    // }, [googleBooks])
 
     const handleSavedBooks = (id) => {
         const savedBooks = googleBooks.find((savedBooks) => savedBooks.id === id)
@@ -57,11 +57,10 @@ function Search() {
             author: savedBooks.volumeInfo.authors.join(", "),
             description: savedBooks.volumeInfo.description,
             link: savedBooks.volumeInfo.infoLink
-        }).then(
-            () => googleBooks
-        ).catch((err) => {
-            console.log(err);
-        })
+        }).then(() => googleBooks)
+            .catch((err) => {
+                console.log(err);
+            })
 
 
     }
@@ -73,8 +72,24 @@ function Search() {
                 Search
             </button>
             <div>
-                {displayData}
+                {googleBooks.map((books) => {
+                    return (
+                        <div key={books.id}>
+                            <p>{books.volumeInfo.title}</p>
+                            <img src={books.volumeInfo.imageLinks.thumbnail} alt="book img" />
+                            <p>{books.volumeInfo.authors.join(", ")}</p>
+                            <p>{books.volumeInfo.description}</p>
+                            <button onClick={() => handleSavedBooks(books.id)}>
+                                Save
+                            </button>
+                            <a target="_blank" href={books.volumeInfo.infoLink} rel="noreferrer">View</a>
+                        </div>
+                    )
+                })}
             </div>
+            {/* <div>
+                {displayData}
+            </div> */}
 
 
         </div>

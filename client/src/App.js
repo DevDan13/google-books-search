@@ -7,10 +7,10 @@ function App() {
     <Router>
       <Switch>
 
-        <Route path="/saved">
+        <Route exact path="/saved">
           <Saved />
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <Search />
         </Route>
 
