@@ -6,7 +6,6 @@ import API from "../utils/API";
 function Search() {
     const [search, setSearch] = useState("");
     const [googleBooks, setGoogleBooks] = useState([]);
-    // const [displayData, setDisplayData] = useState([])
 
     const handleInputChange = (event) => {
         setSearch(event.target.value)
@@ -22,29 +21,6 @@ function Search() {
 
     //console.log(googleBooks);
 
-
-
-
-    // useEffect(() => {
-    //     if (googleBooks) {
-    //         const showBooks = googleBooks.map((books) => {
-    //             return (
-    //                 <div key={books.id}>
-    //                     <p>{books.volumeInfo.title}</p>
-    //                     <img src={books.volumeInfo.imageLinks.thumbnail} alt="book img" />
-    //                     <p>{books.volumeInfo.authors.join(", ")}</p>
-    //                     <p>{books.volumeInfo.description}</p>
-    //                     <button onClick={handleSavedBooks(books.id)}>
-    //                         Save
-    //                     </button>
-    //                     <a target="_blank" href={books.volumeInfo.infoLink} rel="noreferrer">View</a>
-    //                 </div>
-    //             )
-
-    //         });
-    //         setDisplayData(showBooks);
-    //     }
-    // }, [googleBooks])
 
     const handleSavedBooks = (id) => {
         const savedBooks = googleBooks.find((savedBooks) => savedBooks.id === id)
@@ -87,11 +63,6 @@ function Search() {
                     )
                 })}
             </div>
-            {/* <div>
-                {displayData}
-            </div> */}
-
-
         </div>
     )
 }
