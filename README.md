@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# google-books-search
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [test](#test)
+* [Questions](#questions)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Google Book Search search page](https://github.com/DevDan13/images/blob/main/img/home-page.png?raw=true)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<br>
 
-### `npm test`
+![Google Book Search search page](https://github.com/DevDan13/images/blob/main/img/searched-book.png?raw=true)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br>
 
-### `npm run build`
+![Google Book Search saved page](https://github.com/DevDan13/images/blob/main/img/saved-book.png?raw=true)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Deployed Application
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Google Books Search app](https://google-book-search-app13.herokuapp.com/)
 
-### `npm run eject`
+## Description
+The google books search MEARN lets you easily search for books at your convinience.  It allows you to further view those books by clicking the view button, which takes you to the google book's page where you may find more information on it or purchase it.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Installation
+There are many packages to install which can be viewed in the package.json.  please view it and remove any you do not need, then run the following command in your terminal.  Please do this in both the client folder, as well as the main project repository.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+npm i
+```
+## Usage 
+Use the search bar by typing the book you wish to find then click search.  Books will populate the page for your viewing and reading pleasure.  Click on view to be taken to that book's page on google books, or click saved to save the book in our database for a later viewing! Free of charge of course.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## License
 
-## Learn More
+This project's code is allowed to be "set free" using [The Unlicense](https://unlicense.org/).  This link provides all the details for the license.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributing
+No collaborators to report for this application.  If you would like to collabrate with me I would e happy to hear from you.  email me at dan1397732@gmail.com
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Test
+Once saved to our database test this by clicking over to tthe saved page.  Your book will appear there exactly as it had appeared in our search page.  The book now will have an option to be viewed as the previous page had, but also a button to delete it from our database.  The delete button will remove the book from this page, but can still be searched for in our search page again if accidents happen.  Try saving a book by clicking on save, then deleting the saved book by clicking the header button to the saved page and click delete to clear your book list!
 
-### Code Splitting
+## Questions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Please checkout My GitHub profile [DevDan13](https://github.com/DevDan13) for more of my work.
