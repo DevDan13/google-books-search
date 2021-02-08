@@ -1,5 +1,5 @@
 // import axios from 'axios';
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import API from "../utils/API";
 import Grid from "@material-ui/core/Grid";
 import BookCard from "../components/BookCard/index";
