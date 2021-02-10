@@ -29,7 +29,7 @@
 [Google Books Search app](https://google-book-search-app13.herokuapp.com/)
 
 ## Description
-The google books search MEARN lets you easily search for books at your convinience.  It allows you to further view those books by clicking the view button, which takes you to the google book's page where you may find more information on it or purchase it.
+The google books search MERN lets you easily search for books at your convinience.  It allows you to further view those books by clicking the view button, which takes you to the google book's page where you may find more information on it or purchase it.
 
 
 ## Installation
